@@ -1,3 +1,21 @@
+import flatpickr from "flatpickr";
+import Notiflix from 'notiflix';
+import "flatpickr/dist/flatpickr.min.css";
+
+
+const buttonStart = document.querySelector('[data-start]');
+const inputEl = document.querySelector('#datetime-picker');
+const daysEl = document.querySelector('[data-days]');
+const hoursEl = document.querySelector('[data-hours]');
+const minutesEl = document.querySelector('[data-minutes]');
+const secondsEl = document.querySelector('[data-seconds]');
+
+
+const fp = flatpickr(inputEl, config); 
+const config = {
+  
+}
+
 function convertMs(ms) {
     // Number of milliseconds per unit of time
     const second = 1000;
