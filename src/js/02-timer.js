@@ -42,7 +42,7 @@ function startTimer() {
   buttonStart.setAttribute('disabled', 'disabled');
   inputEl.setAttribute('disabled', 'disabled');
 
-  timerId = setInterval(() => {
+  let timerId = setInterval(() => {
     const time = selectDate - Date.now();
     const { days, hours, minutes, seconds } = convertMs(time);
  
