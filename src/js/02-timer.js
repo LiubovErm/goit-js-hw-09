@@ -54,6 +54,7 @@ function startTimer() {
     if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
       clearInterval(timerId);
       buttonStart.removeAttribute('disabled');
+      inputEl.removeAttribute('disabled');
       Notiflix.Notify.success('ЗАВЕРШЕНО!!!');
     }
   }, 1000);
@@ -122,6 +123,7 @@ function convertMs(ms) {
 //     clearInterval(this.timerId);
 //     Notiflix.Notify.success('ЗАВЕРШЕНО!!!');
 //     buttonStart.removeAttribute('disabled');
+      // inputEl.removeAttribute('disabled');
 //   },
 
 //   convertMs(ms) {
