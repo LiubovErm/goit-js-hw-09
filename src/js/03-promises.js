@@ -15,14 +15,13 @@ function onSubmit(event) {
   const delayNumber = Number(delayEl.value);
   const stepNumber = Number(stepEl.value);
   const amountNumber = Number(amountEl.value);
-  const promiseDelay = delayNumber + stepNumber * (i - 1);
   // console.log (delayNumber);
   // console.log (stepNumber);
   // console.log (amountNumber);
 
   for (let i = 1; i <= amountNumber; i += 1) {
 
-    createPromise(i, promiseDelay)
+    createPromise(i, delayNumber + stepNumber * (i - 1))
       .then(({ position, delay }) => {
         Notiflix.Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
       })
