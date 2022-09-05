@@ -3,7 +3,7 @@ const buttonStop = document.querySelector ('[data-stop]');
 
 buttonStart.addEventListener ("click", startChangeColor);
 buttonStop.addEventListener ("click", stopChangeColor);
-
+let timerId = null;
 
 function startChangeColor() {
     timerId = setInterval(() => {
