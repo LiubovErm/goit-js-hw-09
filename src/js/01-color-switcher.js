@@ -9,13 +9,13 @@ function startChangeColor() {
     timerId = setInterval(() => {
         document.body.style.backgroundColor = getRandomHexColor();
       }, 1000);
-    buttonStart.setAttribute ('disabled', 'disabled');
+    buttonStart.setAttribute ('disabled', ' ');
     buttonStop.removeAttribute ('disabled');
 }
 
 function stopChangeColor() {
     clearInterval(timerId);
-    buttonStop.setAttribute ('disabled', 'disabled');
+    buttonStop.setAttribute ('disabled', ' ');
     buttonStart.removeAttribute ('disabled');
 }
 

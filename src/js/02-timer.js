@@ -12,7 +12,7 @@ const secondsEl = document.querySelector('[data-seconds]');
 
 let selectDate;
 
-buttonStart.setAttribute('disabled', 'disabled');
+buttonStart.setAttribute('disabled', ' ');
 buttonStart.addEventListener('click', startTimer);
 
 const options = {
@@ -24,7 +24,7 @@ const options = {
   onClose(selectedDates) {
     if (Date.now() >= selectedDates[0]) {
       Notiflix.Notify.failure("Please choose a date in the future");
-      buttonStart.setAttribute('disabled', 'disabled');
+      buttonStart.setAttribute('disabled', ' ');
       return;
     }
     buttonStart.removeAttribute('disabled');
@@ -39,8 +39,8 @@ flatpickr(inputEl, options);
 
 function startTimer() {
   Notiflix.Notify.success('ПОЧАЛИ');
-  buttonStart.setAttribute('disabled', 'disabled');
-  inputEl.setAttribute('disabled', 'disabled');
+  buttonStart.setAttribute('disabled', ' ');
+  inputEl.setAttribute('disabled', ' ');
 
   let timerId = setInterval(() => {
     const time = selectDate - Date.now();
